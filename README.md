@@ -10,18 +10,10 @@ boshHarf()
 
 #2
 
-a = int(input("a = "))
-b = int(input("b = "))
-c = int(input("c = "))
+n = int(input("n ="))
+for i in range(3, n + 1, 2):
 
-min_son = a
-if b < min_son:
-    min_son = b
-if c < min_son:
-    min_son = c
-
-print("Eng kichik son:✅", min_son)
-
+    print(i, end='? ')
 
 
 #3
@@ -42,14 +34,15 @@ print("O'rni:", min_index)
 
 
 #4
-son = int(input("SONNI KIRITING: "))
+m,n = map(int, input("m va n ni kiriting ").split())
+max_values = [-float('inf')] * n
+for _ in range(m):
+    ROW = list(map(int, input().split()))
+    for j in range(n):
+        if ROW[j] > max_values[j]:
+         max_values[j] = ROW[j]
 
-if son > 0:
-    print("Bu musbat son.")
-elif son < 0:
-    print("Bu manfiy son.")
-else:
-    print("Bu son nolga tengdur.")
+print(max_values)
 
 
 
@@ -109,15 +102,15 @@ print("AJOYIBB")
 
 
 #10
-m,n = map(int, input("m va n ni kiriting ").split())
-max_values = [-float('inf')] * n
-for _ in range(m):
-    ROW = list(map(int, input().split()))
-    for j in range(n):
-        if ROW[j] > max_values[j]:
-         max_values[j] = ROW[j]
+son = int(input("SONNI KIRITING: "))
 
-print(max_values)
+if son > 0:
+    print("Bu musbat son.")
+elif son < 0:
+    print("Bu manfiy son.")
+else:
+    print("Bu son nolga tengdur.")
+
 
 
 
@@ -185,10 +178,19 @@ print("Kopaytma:", KOPAYTMA)
 
 
 #18
-n = int(input("n ="))
-for i in range(3, n + 1, 2):
 
-    print(i, end='? ')
+a = int(input("a = "))
+b = int(input("b = "))
+c = int(input("c = "))
+
+min_son = a
+if b < min_son:
+    min_son = b
+if c < min_son:
+    min_son = c
+
+print("Eng kichik son:✅", min_son)
+
 
 
 
